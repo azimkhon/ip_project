@@ -9,7 +9,12 @@
         <link rel="stylesheet" href="/css/app.css" type="text/css">
 </head>
 <body>
-<div id="example">
+<div class="container">
+    <div class="row">
+        <div id="app" class="col-lg-12">
+
+        </div>
+    </div>
     
 </div>
 
