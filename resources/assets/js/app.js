@@ -15,4 +15,5 @@ window.axios = require('axios');
  */
 
 require('./components/Example');
-require('./components/User')
+require('./components/User');
+require('./components/Create')
