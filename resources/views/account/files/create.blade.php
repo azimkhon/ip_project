@@ -8,6 +8,7 @@
 		
 		{{csrf_field()}}
 <!-- Azimkhon -->
+<!-- Azimkhon 2 -->
 		<div class="field">
 			<label for="title" class="label">Title</label>
 			<p class="control">
