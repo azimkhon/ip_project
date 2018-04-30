@@ -7,7 +7,7 @@
 	<form action="{{ route('account.files.store',$file) }}" method="post" class="form">
 		
 		{{csrf_field()}}
-
+<!-- Azimkhon -->
 		<div class="field">
 			<label for="title" class="label">Title</label>
 			<p class="control">
