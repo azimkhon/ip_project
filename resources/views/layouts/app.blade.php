@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
+<<<<<<< HEAD
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,5 +77,17 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+=======
+    @include ('layouts.partials._head')
+    
+</head>
+<body>
+    <div id="app">
+        @include ('layouts.partials._navigation')
+        
+        @yield('content')
+    </div>
+    @include ('layouts.partials._scripts')
+>>>>>>> 6633753e290c8a6ce781a5b522f73b8c74a238a7
 </body>
 </html>
