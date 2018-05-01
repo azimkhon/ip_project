@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 <div class="container">
 <<<<<<< HEAD
     <div class="row">
@@ -39,31 +40,46 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
+=======
+>>>>>>> d96a4e6f32011b7469548f6982480119d77df373
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+<section class="section">
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column is-half is-offset-one-quarter">
+                <h1 class="title">Sign in</h1>
+                <form action="#" method="post" class="form">
+                    {{csrf_field()}}
 
-                        <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                    <div class="field">
+                        <label for="email" class="label">Email</label>
+                        <p class="control">
+                            <input type="email" name="email" id="email" placeholder="e.g. aziz@gmail.com" class="input {{$errors->has('email') ? 'is-danger' : ''}}" value="{{old('email')}}">
+                        </p>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                        @if ($errors->has('email'))
+                            <p class="help is-danger">
+                                {{$errors->first('email')}}
+                            </p>
+                        @endif
 
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                    
+                    <div class="field">
+                        <label for="password" class="label">Password</label>
+                        <p class="control">
+                            <input type="password" name="password" id="password" class="input {{$errors->has('password') ? 'is-danger' : ''}}">
+                        </p>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                        @if ($errors->has('password'))
+                            <p class="help is-danger">
+                                {{$errors->first('password')}}
+                            </p>
+                        @endif
+                    </div>
 
+<<<<<<< HEAD
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
 >>>>>>> 6633753e290c8a6ce781a5b522f73b8c74a238a7
@@ -115,8 +131,31 @@
                         </div>
                     </form>
                 </div>
+=======
+                    <div class="field ">
+                        <p class="control">
+                            <label class="checkout" for="remember">
+                                <input type="checkbox" name="remember" id="remember" checked>
+                                Remember me
+                            </label>
+                        </p>
+                        
+                    </div>
+
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <button class="button is-primary">Sign in</button>
+                        </p>
+                        <p>
+                            <a href="{{route('password.request')}}">Reset password</a>
+                        </p>
+                    </div>
+
+                </form>
+>>>>>>> d96a4e6f32011b7469548f6982480119d77df373
             </div>
         </div>
     </div>
-</div>
+</section>
+
 @endsection

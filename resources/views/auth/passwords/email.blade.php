@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 <div class="container">
 <<<<<<< HEAD
     <div class="row">
@@ -19,10 +20,20 @@
 >>>>>>> 6633753e290c8a6ce781a5b522f73b8c74a238a7
                     @if (session('status'))
                         <div class="alert alert-success">
+=======
+    <section class="section">
+        <div class="container is-fluid">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    
+                    @if(session('status'))
+                        <div class="notification is-success">
+>>>>>>> d96a4e6f32011b7469548f6982480119d77df373
                             {{ session('status') }}
                         </div>
                     @endif
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <form class="form-horizontal" method="POST" action="{{ route('password.email') }}">
                         {{ csrf_field() }}
@@ -67,11 +78,32 @@
 >>>>>>> 6633753e290c8a6ce781a5b522f73b8c74a238a7
                                 </button>
                             </div>
+=======
+                    <h1 class="title">Recover your password</h1>
+                    <form action="{{ route('password.email') }}" method="post" class="form">
+                        {{ csrf_field() }}
+
+                        <div class="field">
+                            <label for="email" class="label">Email</label>
+                            <p class="control">
+                                <input type="email" name="email" id="email" placeholder="e.g. aziz@gmail.com" class="input{{ $errors->has('email') ? ' is-danger' : '' }}" value="{{ old('email') }}">
+                            </p>
+                            @if ($errors->has('email'))
+                                <p class="help is-danger">
+                                    {{ $errors->first('email') }}
+                                </p>
+                            @endif
+                        </div>
+
+                        <div class="field">
+                            <p class="control">
+                                <button class="button is-primary">Send email</button>
+                            </p>
+>>>>>>> d96a4e6f32011b7469548f6982480119d77df373
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 @endsection

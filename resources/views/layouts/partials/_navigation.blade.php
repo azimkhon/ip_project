@@ -11,7 +11,7 @@
                 <span></span>
                 <span></span>
         </span>
-
+        
         <div class="nav-right nav-menu">
             @if (auth()->check())
                 <a href="#" class="nav-item" onclick="event.preventDefault() document.getElementById('logout').submit();">
