@@ -2929,6 +2929,7 @@
         },
         {
             "name": "phpunit/php-code-coverage",
+<<<<<<< HEAD
             "version": "6.0.3",
             "source": {
                 "type": "git",
@@ -2939,6 +2940,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/774a82c0c5da4c1c7701790c262035d235ab7856",
                 "reference": "774a82c0c5da4c1c7701790c262035d235ab7856",
+=======
+            "version": "6.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
+                "reference": "52187754b0eed0b8159f62a6fa30073327e8c2ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/52187754b0eed0b8159f62a6fa30073327e8c2ca",
+                "reference": "52187754b0eed0b8159f62a6fa30073327e8c2ca",
+>>>>>>> ab432e609307192c0b8ea130924a3c319030295b
                 "shasum": ""
             },
             "require": {
@@ -2988,7 +3001,11 @@
                 "testing",
                 "xunit"
             ],
+<<<<<<< HEAD
             "time": "2018-04-06T15:39:20+00:00"
+=======
+            "time": "2018-04-29T14:59:09+00:00"
+>>>>>>> ab432e609307192c0b8ea130924a3c319030295b
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3178,6 +3195,7 @@
         },
         {
             "name": "phpunit/phpunit",
+<<<<<<< HEAD
             "version": "7.1.4",
             "source": {
                 "type": "git",
@@ -3188,6 +3206,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6d51299e307dc510149e0b7cd1931dd11770e1cb",
                 "reference": "6d51299e307dc510149e0b7cd1931dd11770e1cb",
+=======
+            "version": "7.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit.git",
+                "reference": "ca64dba53b88aba6af32aebc6b388068db95c435"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ca64dba53b88aba6af32aebc6b388068db95c435",
+                "reference": "ca64dba53b88aba6af32aebc6b388068db95c435",
+>>>>>>> ab432e609307192c0b8ea130924a3c319030295b
                 "shasum": ""
             },
             "require": {
@@ -3206,7 +3236,11 @@
                 "phpunit/php-text-template": "^1.2.1",
                 "phpunit/php-timer": "^2.0",
                 "phpunit/phpunit-mock-objects": "^6.1.1",
+<<<<<<< HEAD
                 "sebastian/comparator": "^2.1 || ^3.0",
+=======
+                "sebastian/comparator": "^3.0",
+>>>>>>> ab432e609307192c0b8ea130924a3c319030295b
                 "sebastian/diff": "^3.0",
                 "sebastian/environment": "^3.1",
                 "sebastian/exporter": "^3.1",
@@ -3254,7 +3288,11 @@
                 "testing",
                 "xunit"
             ],
+<<<<<<< HEAD
             "time": "2018-04-18T13:41:53+00:00"
+=======
+            "time": "2018-04-29T15:09:19+00:00"
+>>>>>>> ab432e609307192c0b8ea130924a3c319030295b
         },
         {
             "name": "phpunit/phpunit-mock-objects",

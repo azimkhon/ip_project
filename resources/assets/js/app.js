@@ -14,6 +14,14 @@ window.axios = require('axios');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+<<<<<<< HEAD
 require('./components/Example');
 require('./components/User');
 require('./components/Create')
+=======
+Vue.component('example-component', require('./components/ExampleComponent.vue'));
+
+const app = new Vue({
+    el: '#app'
+});
+>>>>>>> ab432e609307192c0b8ea130924a3c319030295b
