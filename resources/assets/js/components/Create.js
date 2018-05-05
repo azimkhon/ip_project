@@ -17,7 +17,7 @@ export default class Create extends React.Component {
             <div   className = "form-group" >
             < label   className = "control-label col-sm-2" for = "name" > Name : </label>
             <div className="col-sm-10">
-            <input type="text" classNameName="form-control" id="name" placeholder="Enter name" name="name"/>
+            <input type="text" className="form-control" id="name" placeholder="Enter name" name="name"/>
         </div>
     </div>
         <div className="form-group">
