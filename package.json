@@ -18,7 +18,7 @@
     "vue": "^2.1.10"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "bulma": "^0.7.1"
+    "bulma": "^0.7.1",
+    "font-awesome": "^4.7.0"
   }
 }
