@@ -49,6 +49,7 @@ class FileController extends Controller
     {
         $this->authorize('touch', $file);
 
+        
         $file->fill($request->only(['title','overview', 'overview_short', 'price']));
         $file->finished = true;
         $file->save();
