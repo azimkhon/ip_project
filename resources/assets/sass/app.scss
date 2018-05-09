@@ -5,20 +5,4 @@
 // Variables
 @import "variables";
 
-<<<<<<< HEAD
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-=======
-<<<<<<< HEAD
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-=======
-@import "node_modules/bulma/bulma"
-
->>>>>>> 6633753e290c8a6ce781a5b522f73b8c74a238a7
->>>>>>> ab432e609307192c0b8ea130924a3c319030295b
+@import "node_modules/bulma/bulma.sass";
