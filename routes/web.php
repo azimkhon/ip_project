@@ -26,6 +26,7 @@ function()
 	});
 });
  
+ Route::post('/{file}/upload','Upload\UploadController@store')->name('upload.store');
 
 // Route::group(['prefix'=>'admin/{id}'], function()
 // {

@@ -3,10 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Upload extends Model
 {
-	use SofDeletes;
+	use SoftDeletes;
 
 	protected $fillable = [
 		'filename',
