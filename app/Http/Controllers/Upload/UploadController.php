@@ -37,7 +37,7 @@ class UploadController extends Controller
 
 	public function destroy(File $file, Upload $upload ) 
 	{
-		abort(500);
+		
 		// Authorized person is uploading
 		$this->authorize('touch', $file);
 		$this->authorize('touch', $upload);
