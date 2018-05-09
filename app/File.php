@@ -56,6 +56,11 @@ class File extends Model
 		return array_only($this->toArray(), self::APPROVAL_PROPERTIES) != $properties;
 	}
 
+	public function uploads()
+	{
+		return $this->hasMany(Upload::class);
+	}
+
 	public function approvals()
 	{
 		return $this->hasMany(FileApproval::class);
