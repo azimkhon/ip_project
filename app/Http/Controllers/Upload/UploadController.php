@@ -27,12 +27,23 @@ class UploadController extends Controller
 		Storage::disk('local')->putFileAs(
 			'files/' . $file->identifier,
 			$uploadedFile,
-			'test.png'
+			$upload->filename
 		); 
 
 		return response()->json([
-			'id' => 1
+			'id' => $upload->id
 		]);
+	}
+
+	public function destroy(File $file, Upload $upload ) 
+	{
+		abort(500);
+		// Authorized person is uploading
+		$this->authorize('touch', $file);
+		$this->authorize('touch', $upload);
+
+
+		$upload->delete();
 	}
     
     protected function storeUpload(File $file, UploadedFile $uploadedFile) 
