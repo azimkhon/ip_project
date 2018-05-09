@@ -7,7 +7,13 @@
 	<form action="{{ route('account.files.store',$file) }}" method="post" class="form">
 		
 		{{csrf_field()}}
-
+		<div class="field">
+			
+	
+			<div id="file" class="dropzone">
+			
+			</div>
+		</div>
 		<div class="field">
 			<label for="title" class="label">Title</label>
 			<p class="control">
@@ -60,4 +66,12 @@
 			<p>We'll review your file before it is publicated.</p>
 		</div>
 	</form>
+@endsection
+
+@section('scripts')
+	<script>
+		var drop = new Dropzone('#file', {
+			url: '/'
+		}) 
+	</script>
 @endsection

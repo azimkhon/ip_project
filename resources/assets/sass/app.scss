@@ -1,9 +1,18 @@
 
 // Fonts
-//@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
 @import "variables";
 
-//Boolma
+// Boolma
 @import "./node_modules/bulma/bulma";
+
+// Dropzone
+@import "./node_modules/dropzone/dist/dropzone";
+
+.dropzone {
+	margin-bottom: 20px;
+	min-height: auto;
+}
+
