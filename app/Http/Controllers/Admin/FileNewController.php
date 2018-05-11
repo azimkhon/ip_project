@@ -16,9 +16,10 @@ class FileNewController extends Controller
     	]);
     }
 
-    public function update() 
+    public function update(File $file) 
     {
-    	
+    	$file->approve();
+    	return back()->withSuccess("{$file->title}  has been approved");
     }
 
     public function destroy() 
