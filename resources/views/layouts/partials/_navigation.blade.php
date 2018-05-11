@@ -27,7 +27,7 @@
 		  	<!-- checking whether users role admin or not, so that in admin panel it will appear -->
 
 		  	@role('admin')
-		  	<a href="#" class="navbar-item">Admin</a>
+		  	<a href="{{ route('admin.index')}}" class="navbar-item">Admin</a>
 		  	@endrole
 		@else
 		    <a href="{{ route('login')}}" class="navbar-item">Sign in</a>

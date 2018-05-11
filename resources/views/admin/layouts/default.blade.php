@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    stats
+    @include('admin.layouts.partials._stats')
 	<section class="section">
 		<div class="container">
 			<div class="columns">
