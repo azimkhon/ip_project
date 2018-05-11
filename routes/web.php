@@ -27,7 +27,13 @@ function()
  
  Route::group(['prefix' => '/admin', 'namespace' => 'Admin', 'middleware' => ['auth','admin']], function () {
  	Route::get('/', 'AdminController@index') -> name('admin.index');
- });
+
+ 	Route::group(['prefix' => '/files'], function()	{
+		Route::group(['prefix' => '/new'], function()	{
+			Route::get('/', 'FileNewController@index') -> name('admin.files.new.index');
+		});
+	});		 
+ }); 
 
 
  Route::post('/{file}/upload','Upload\UploadController@store')->name('upload.store');
