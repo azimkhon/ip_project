@@ -86,6 +86,11 @@ class File extends Model
 		$this->approvals()->delete();
 	}
 
+	public function deleteUnapprovedUploads() 
+	{
+		$this->uploads()->unapproved()->delete();
+	}
+
 	public function approve()
 	{
 		$this->updateToBeVisible();

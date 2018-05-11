@@ -39,6 +39,7 @@ function()
 
 			Route::get('/', 'FileUpdatedController@index') -> name('admin.files.updated.index');
 			Route::patch('/{file}', 'FileUpdatedController@update') -> name('admin.files.updated.update');
+			Route::delete('/{file}', 'FileUpdatedController@destroy') -> name('admin.files.updated.destroy');
 			
 		});
 	});		 
