@@ -36,7 +36,9 @@ function()
 		});
 
 		Route::group(['prefix' => '/updated'], function()	{
+
 			Route::get('/', 'FileUpdatedController@index') -> name('admin.files.updated.index');
+			Route::patch('/{file}', 'FileUpdatedController@update') -> name('admin.files.updated.update');
 			
 		});
 	});		 
