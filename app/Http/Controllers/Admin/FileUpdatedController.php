@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Mail;
 use App\File;
 use Illuminate\Http\Request;
+use App\Mail\Files\FileUpdatesApproved;
+use App\Mail\Files\FileUpdatesRejected;
 use App\Http\Controllers\Controller;
 
 class FileUpdatedController extends Controller
@@ -23,7 +26,9 @@ class FileUpdatedController extends Controller
     	$file->mergeApprovalProperties();
     	$file->approveAllUploads();
     	$file->deleteAllApprovals();
-    	    	
+
+    	Mail::to($file->user)->send(new FileUpdatesApproved($file));
+
     	return back()->withSuccess("{$file->title} changes have been approved.");
     }
 
@@ -31,6 +36,9 @@ class FileUpdatedController extends Controller
     {
     	$file->deleteAllApprovals();
     	$file->deleteUnapprovedUploads();
+
+    	Mail::to($file->user)->send(new FileUpdatesRejected($file));
+
     	return back()->withSuccess("{$file->title} changes have been rejected.");
     }
 }

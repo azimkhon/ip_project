@@ -1,5 +1,5 @@
 @extends('emails.layouts.default')
 
 @section('content')
-	Your file "{{ $file->title }}" has been approved
+	UPDATES of your file "{{ $file->title }}" has been rejected
 @endsection

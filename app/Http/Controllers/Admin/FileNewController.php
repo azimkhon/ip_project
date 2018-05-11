@@ -30,7 +30,7 @@ class FileNewController extends Controller
 
     public function destroy(File $file) 
     {
-    	$file->delete();
+    	$file->delete(); 
     	$file->uploads->each->delete();
 
         Mail::to($file->user)->send(new FileRejected($file));
