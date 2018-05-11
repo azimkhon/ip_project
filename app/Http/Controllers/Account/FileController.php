@@ -54,7 +54,7 @@ class FileController extends Controller
         $file->finished = true;
         $file->save();
 
-        return redirect()->route('account.files.index')->with('Thanks, your files are successfully submitted');
+        return redirect()->route('account.files.index')->withSuccess('Thanks, your files are successfully submitted');
     }
 
     public function update(File $file, UpdateFileRequest $request)
