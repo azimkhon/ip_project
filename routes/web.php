@@ -25,6 +25,11 @@ function()
 	});
 });
  
+ Route::group(['prefix' => '/admin', 'namespace' => 'Admin'], function () {
+ 	Route::get('/', 'AdminController@index') -> name('admin.index');
+ });
+
+
  Route::post('/{file}/upload','Upload\UploadController@store')->name('upload.store');
  Route::delete('/{file}/upload/{upload}','Upload\UploadController@destroy')->name('upload.destroy');
 
