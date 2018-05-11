@@ -4,7 +4,6 @@ namespace App\Http\Requests\File;
 
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
-use App\Http\Requests\File\StoreFileRequest;
 
 class StoreFileRequest extends FormRequest
 {
@@ -23,9 +22,15 @@ class StoreFileRequest extends FormRequest
      *
      * @return array
      */
+    protected function validationData() 
+    {
+        $this->merge(['uploads' => $this->file->id]);
+        return $this->all();
+    }
+
     public function rules()
     {
-        return [
+       return [
             'title' => 'required|max:255',
             'overview_short' => 'required|max:300',
             'overview' => 'required|max:5000',

@@ -19,6 +19,15 @@
 		<input type="hidden" name="live" value="false">
 
 		<div class="field">
+			<div id="file" class="dropzone"></div>
+			@if($errors->has('uploads'))
+				<p class="help is-danger">{{ $errors->first('uploads') }}</p>
+			@endif
+		</div>
+
+		<!-- Review this part again -->
+
+		<div class="field">
 			<p class="control">
 				<label for="live" class="checkbox">
 					<input type="checkbox" name="live" id="live"{{ $file-> live ? 'checked' : '' }}>
@@ -79,4 +88,7 @@
 			<p>Your file will be reviewed by administrator.</p>
 		</div>
 	</form>
+@endsection
+@section('scripts')
+	@include('files.partials._file_upload_js')
 @endsection
