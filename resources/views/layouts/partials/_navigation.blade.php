@@ -23,10 +23,16 @@
 	  	@if(auth()->check())
 		  	<a href="#" class="navbar-item" onclick="event.preventDefault();document.getElementById('logout').submit();">Sign out</a>
 		  	<a href="{{ route('account') }}" class="navbar-item">Your Account</a>
+
+		  	<!-- checking whether users role admin or not, so that in admin panel it will appear -->
+
+		  	@role('admin')
+		  	<a href="#" class="navbar-item">Admin</a>
+		  	@endrole
 		@else
 		    <a href="{{ route('login')}}" class="navbar-item">Sign in</a>
 		    <div class="navbar-item"><a href="{{ route('register')}}" class="button">Start Deal</a></div>
-		@endif
+		@endif 
 	  </div>    
 
   </div>
