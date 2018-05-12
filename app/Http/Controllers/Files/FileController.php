@@ -14,8 +14,12 @@ class FileController extends Controller
     	{
     		return abort(404);
     	}
+
+        $uploads = $file->uploads()->approved()->get(); 
+
     	return view('files.show', [
-    		'file' => $file
+    		'file' => $file,
+            'uploads' => $uploads,
     	]);
     }
 }

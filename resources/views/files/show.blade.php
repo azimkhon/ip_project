@@ -22,7 +22,13 @@
 						<h1 class="title">Overview</h1>
 						<p>{{ $file->overview}}</p>
 					</div>
-					<div class="column">50%</div>				
+					<div class="column">
+						<h1 class="title">Uploaded files</h1>
+						@foreach($uploads as $upload)
+							<?php $number = $upload->size/1024;	?>
+							<p>{{$upload->filename}} <strong> Size:</strong> {{round($number,2)}} MB</p>
+						@endforeach
+					</div>				
 				</div>
 			</div>
 		</div>
