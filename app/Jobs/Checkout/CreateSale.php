@@ -38,7 +38,7 @@ class CreateSale implements ShouldQueue
     {
         $sale = new Sale;
 
-       // $this->file->price = 30;
+       $this->file->price = 30;
 
         $sale->fill([
             'identifier' => uniqid(true),
