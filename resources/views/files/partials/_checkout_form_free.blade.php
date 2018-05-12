@@ -1,4 +1,4 @@
-<form action="#" method="post">
+<form action="{{ route('checkout.free', $file)}}" method="post">
 	{{csrf_field()}}
 
 	<span class="field has-addons">
