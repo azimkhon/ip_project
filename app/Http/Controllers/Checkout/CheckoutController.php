@@ -14,7 +14,7 @@ class CheckoutController extends Controller
     {
     	if (!$file->isFree()) 
     	{
-    		return back()->withError('This file is not free!');
+    		return back();
     	}
 
     	dispatch(new CreateSale($file, $request->email));

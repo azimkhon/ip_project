@@ -13,7 +13,7 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\Ceckout\SaleCreated' => [
+        'App\Events\Checkout\SaleCreated' => [
             'App\Listeners\Checkout\SendEmailToBuyer',
         ],
     ];
