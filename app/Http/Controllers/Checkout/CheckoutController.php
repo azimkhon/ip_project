@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Checkout;
 use App\File;
 use Illuminate\Http\Request;
 use App\Http\Requests\Checkout\FreeCheckoutRequest;
+use App\Jobs\Checkout\CreateSale;
 use App\Http\Controllers\Controller;
 
 class CheckoutController extends Controller
@@ -15,6 +16,8 @@ class CheckoutController extends Controller
     	{
     		return back()->withError('This file is not free!');
     	}
+
+    	dispatch(new CreateSale($file, $request->email));
 
     	return back()->withSuccess('We\'ve sent download link to your email address');
     }
