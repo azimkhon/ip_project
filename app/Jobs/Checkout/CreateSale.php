@@ -4,7 +4,7 @@ namespace App\Jobs\Checkout;
 
 use App\Sale;
 use App\File;
-
+use App\Events\Checkout\SaleCreated;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
@@ -51,5 +51,8 @@ class CreateSale implements ShouldQueue
         $sale->user()->associate($this->file->user);
 
         $sale->save();
+
+        event(new SaleCreated($sale));
+
     }
 }
