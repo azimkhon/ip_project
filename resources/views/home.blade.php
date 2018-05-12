@@ -113,7 +113,7 @@
   <div class="column is-two-fifths">
     <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="{{/contactus">Contact Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
       </ul>
   </div>
   <div class="column">

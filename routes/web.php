@@ -3,6 +3,9 @@
 Auth::routes(); 
 
 Route::get('/', 'HomeController@index') -> name('home');
+Route::get('/contact', 'ContactController@getContact')->name('contact');
+Route::post('/contact', 'ContactController@postContact')->name('contact');
+
 
 Route::group(['prefix' => '/account', 'middleware' => ['auth'], 'namespace'=>'Account'],
 function()
