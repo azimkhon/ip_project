@@ -81,6 +81,11 @@ class File extends Model
 	{
 		return 'identifier';
 	}
+
+	public function getUploadList()
+	{
+		return $this->uploads()->approved()->get()->pluck('path')->toArray();
+	}
  	
 //	public function matchesSale(Sale $sale) 
 //	{
