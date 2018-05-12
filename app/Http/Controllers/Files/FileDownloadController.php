@@ -22,13 +22,26 @@ class FileDownloadController extends Controller
     		return abort(403);
     }
 
-/*
-     	if($file->matchesSale($sale))
-    	{
-    		return abort(403);
-    	}
- */   	
-     $this->zipper->make()->add(['a','b','c'])->close();
 
+    // 	if(!$file->matchesSale($sale))
+    //	{
+    //		return abort(403);
+    //	}
+   	
+    // $this->zipper->make()->add(['a','b','c'])->close();
+    	$this->createZipForFileInPath($file, $path = $this->generateTemproraryPath($file));
+
+    	return response()->download($path)->deleteFileAfterSend(true);
     }
+
+    protected function createZipForFileInPath(File $file, $path)
+    {
+	  $this->zipper->make($path)->add($file->getUploadList())->close();
+    }
+
+    protected function generateTemproraryPath(File $file)
+    {
+    	return public_path('tmp/' . str_slug($file->title) . '.zip');
+    }
+
 }

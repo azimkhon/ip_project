@@ -87,10 +87,10 @@ class File extends Model
 		return $this->uploads()->approved()->get()->pluck('path')->toArray();
 	}
  	
-//	public function matchesSale(Sale $sale) 
-//	{
-//		return $this->sales->contains($sale);
-//	}
+	//public function matchesSale(Sale $sale) 
+	//{
+	//	return $this->sales->contains($sale);
+	//}
 
 	public function visible() 
 	{
