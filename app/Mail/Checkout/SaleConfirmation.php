@@ -29,6 +29,7 @@ class SaleConfirmation extends Mailable
      *
      * @return $this
      */
+    
     public function build()
     {
         return $this->subject('Your purchase confirmation')->view('emails.checkout.confirmation');

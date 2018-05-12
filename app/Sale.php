@@ -10,7 +10,7 @@ class Sale extends Model
     	'identifier',
     	'buyer_email',
     	'sale_price',
-    	'sale_commission',
+    	'sale_commission'
     ];
 
     public function getRouteKeyName()

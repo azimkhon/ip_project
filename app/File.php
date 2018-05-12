@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Sale;
 use App\Traits\HasApprovals;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
@@ -80,6 +81,11 @@ class File extends Model
 	{
 		return 'identifier';
 	}
+ 	
+//	public function matchesSale(Sale $sale) 
+//	{
+//		return $this->sales->contains($sale);
+//	}
 
 	public function visible() 
 	{
