@@ -2,8 +2,8 @@
 
 @section('content')
 
-<section class="hero is-primary">
-       <div id="myCarousel" class="carousel slide" data-ride="carousel">
+<section class="hero">
+     <!--   <div id="myCarousel" class="carousel slide" data-ride="carousel">
               
               <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -35,7 +35,73 @@
                 <span class="glyphicon glyphicon-chevron-right"></span>
                 <span class="sr-only">Next</span>
               </a>
-        </div>
+        </div> -->
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://img.alltor.me/img/2018-05/12/tbhzx96sm4a7uhicbxnjhjun9.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://img.alltor.me/img/2018-05/12/b2p2w6kydalb75n15kbsmdg1n.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://img.alltor.me/img/2018-05/12/na819sn1eia3lben892x3b95u.jpg" style="width:100%">
+</div>
+
+   <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 6000); // Change image every 2 seconds
+
+}
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
 </section>
 <section class="section features">
 <div class="container has-text-centered">
