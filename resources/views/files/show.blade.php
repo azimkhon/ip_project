@@ -8,9 +8,14 @@
 					<strong>{{$file->user->name}}</strong> is selling
 				</h3>
 				<h1 class="title is-1 is-spaced">{{$file->title}}</h1>
-				<h3 class="subtitle">
+				<h2 class="subtitle">
 					{{ $file->overview_short}}
-				</h3>
+				</h2>
+				
+				@if($file->isFree())
+					@include('files.partials._checkout_form_free')
+				@endif
+				
 			</div>
 		</div>
 	</section>
