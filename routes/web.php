@@ -3,11 +3,15 @@
 Auth::routes(); 
 
 Route::get('/', 'HomeController@index') -> name('home');
+
+Route::get('/account/connect', 'Account\MarketplaceConnectController@index') -> name('account.connect');
+
+
 Route::get('/contact', 'ContactController@getContact')->name('contact');
 Route::post('/contact', 'ContactController@postContact')->name('contact');
 
 
-Route::group(['prefix' => '/account', 'middleware' => ['auth'], 'namespace'=>'Account'],
+Route::group(['prefix' => '/account', 'middleware' => ['auth', 'needs.marketplace'], 'namespace'=>'Account'],
 function()
 {
 	Route::get('/', 'AccountController@index') -> name('account');
