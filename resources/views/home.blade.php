@@ -186,7 +186,7 @@ function showSlides() {
     <div class="columns">
     <div class="column">
       <center>
-        <a href=""><img src="https://img.alltor.me/img/2018-05/12/1iqyelz1d04zfgse8t5xg8tqc.png">
+        <a href="https://www.facebook.com/"><img src="https://img.alltor.me/img/2018-05/12/1iqyelz1d04zfgse8t5xg8tqc.png">
             <div>
              Facebook 
             </div>
@@ -195,9 +195,10 @@ function showSlides() {
     </div>
     <div class="column">
       <center>
-        <a href=""><img src="https://img.alltor.me/img/2018-05/12/aoqx1tn0abdl25o1xd75wb2f7.png">
+        <a href="https://github.com/azimkhon/ip_project.git"><img src="https://img.alltor.me/img/2018-05/13/imyfior7z2bs0lvtko3gn4p1m.png">
           <div>
-            Instagram 
+            GitHub<br>
+            (professor please visit) 
           </div>
         </a>
       </center>
