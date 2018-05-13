@@ -35,7 +35,7 @@
                         
                         <div class="field">
                             <p class="control">
-                                <button class="button is-primary">Send email</button>
+                                <button class="button is-info">Send email</button>
                             </p>
                         </div>
                         

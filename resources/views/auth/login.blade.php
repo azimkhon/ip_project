@@ -50,7 +50,7 @@
 
                         <div class="field is-grouped">
                             <p class="control">
-                                <button class="button is-primary">Sign in</button>
+                                <button class="button is-info">Sign in</button>
                             </p>
                             <p>
                                 <a href="{{ route('password.request') }}">Forgotten your password?</a>
