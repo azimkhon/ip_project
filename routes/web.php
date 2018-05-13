@@ -5,7 +5,7 @@ Auth::routes();
 Route::get('/', 'HomeController@index') -> name('home');
 
 Route::get('/account/connect', 'Account\MarketplaceConnectController@index') -> name('account.connect');
-
+Route::get('/account/connect/complete', 'Account\MarketplaceConnectController@store') -> name('account.complete');
 
 Route::get('/contact', 'ContactController@getContact')->name('contact');
 Route::post('/contact', 'ContactController@postContact')->name('contact');

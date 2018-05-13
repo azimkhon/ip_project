@@ -17,9 +17,9 @@ class RedirectIfMarketplaceNotConnected
     {
         if(!auth()->user()->stripe_id) 
         {
-            return redirect()->route('account.connect')->withError('Please connect a Stripe account.');
+            return redirect()->route('account.connect');
         }
-
+ 
         return $next($request);
     }
 }
