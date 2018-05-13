@@ -7,7 +7,7 @@
 	data-name="{{ $file->title }}"
 	data-description="{{$file->overview_short}}"
 	data-locale="auto"
-	data-currency="usd"
+	data-currency="UZS"
 	>
 		
 	</script>
