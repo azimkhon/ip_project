@@ -7,7 +7,7 @@
 		</p>
 		<p class="control">
 			<button class="button is-primary">
-				Download for free
+				Download
 			</button>
 		</p>
 	</span>
