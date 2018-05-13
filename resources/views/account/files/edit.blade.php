@@ -82,7 +82,7 @@
 
 		<div class="field is-grouped">
 			<p class="control">
-				<button class="button is-primary">Submit</button>
+				<button class="button is-info">Submit</button>
 			</p>
 
 			<p>Your file will be reviewed by administrator.</p>

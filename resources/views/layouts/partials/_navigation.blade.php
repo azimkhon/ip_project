@@ -45,7 +45,8 @@
  <div id="navbarExampleTransparentExample" class="navbar-menu">
     <!-- navbar start, navbar end -->
 <div class="navbar-start">
-	<a class="navbar-item">Home</a>
+	<a href="{{ route('home') }}" class="navbar-item">Home</a>
+  <a href="{{ route('contact') }}" class="navbar-item">Contact Us</a>
 </div>
 
 <div class="navbar-end">
