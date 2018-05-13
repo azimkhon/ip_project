@@ -12,10 +12,10 @@ class CheckoutController extends Controller
 {
     public function free(FreeCheckoutRequest $request, File $file) 
     {
-    	if (!$file->isFree()) 
-    	{
-    		return back();
-    	}
+    //	if (!$file->isFree()) 
+    //	{
+    //		return back();
+    //	}
 
     	dispatch(new CreateSale($file, $request->email));
 

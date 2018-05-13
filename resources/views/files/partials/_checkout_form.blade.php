@@ -1,4 +1,4 @@
-<form action="#" method="POST" >
+<form action="{{ route('checkout.free', $file)}}" method="post">
 	{{csrf_field()}}	
 	{{ $file->price }} USD
 	<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
