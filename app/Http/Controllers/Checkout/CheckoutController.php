@@ -22,5 +22,15 @@ class CheckoutController extends Controller
     	return back()->withSuccess('We\'ve sent download link to your email address');
     }
 
+        public function free(FreeCheckoutRequest $request, File $file) 
+    {
+    //	if (!$file->isFree()) 
+    //	{
+    //		return back();
+    //	}
 
+    	dispatch(new CreateSale($file, $request->email));
+
+    	return back()->withSuccess('We\'ve sent download link to your email address');
+    }
 }

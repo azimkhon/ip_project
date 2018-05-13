@@ -15,6 +15,5 @@
     
     <!-- Scripts -->
     @include('layouts.partials._scripts')
-    @yield('scripts')
 </body>
 </html>

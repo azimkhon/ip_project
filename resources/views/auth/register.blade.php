@@ -52,7 +52,7 @@
 
                         <div class="field">
                             <p class="control">
-                                <button class="button is-info">Sign up</button>
+                                <button class="button is-primary">Sign up</button>
                             </p>
                         </div>
 

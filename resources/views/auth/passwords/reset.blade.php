@@ -42,7 +42,7 @@
 
                         <div class="field">
                             <p class="control">
-                                <button class="button is-info">Change password</button>
+                                <button class="button is-primary">Change password</button>
                             </p>
                         </div>
                         

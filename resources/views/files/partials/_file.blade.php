@@ -3,7 +3,7 @@
 		<div class="content">
 			<p>
 				<strong>
-					<a href="{{ route('files.show', $file)}}">{{ $file->title }}</a>
+					<a href="">{{ $file->title }}</a>
 				</strong>
 				<br>
 				{{ $file->overview_short }}

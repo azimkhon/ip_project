@@ -4,8 +4,11 @@
 	    @include('layouts.partials._head')
 	</head>
 <body>
-   	@yield('content')
-      
+    <div id="app">
+		@yield('content')
+    </div>
     
+    <!-- Scripts -->
+    @include('layouts.partials._scripts')
 </body>
 </html>

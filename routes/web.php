@@ -15,6 +15,7 @@ Route::group(['prefix' => '/account', 'middleware' => ['auth'], 'namespace'=>'Ac
 function()
 {
 	Route::get('/', 'AccountController@index') -> name('account');
+	Route::get('/mydetails', 'AccountController@mydetails') -> name('account.mydetails');
 	
 	Route::group(['prefix' => '/files'], function()
 	{
@@ -56,6 +57,12 @@ function()
  Route::group(['prefix' => '/{file}/checkout', 'namespace' => 'Checkout'], function() 
  {
  		Route::post('free','CheckoutController@free')->name('checkout.free');
+
+ });
+
+  Route::group(['prefix' => '/{user}/checkout', 'namespace' => 'Account'], function() 
+ {
+ 		Route::post('/{user}/mydetails','CheckoutController@mydetails')->name('checkout.mydetails');
 
  });
 

@@ -1,4 +1,4 @@
-<section style="background-color: #c5e4ff;" class="hero">
+<section class="hero is-primary">
 	<div class="hero-body">
 		<div class="level">
 			<div class="level-item has-text-centered">

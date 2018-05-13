@@ -9,7 +9,7 @@
 
 	<ul class="menu-list">
 		<li><a href="#">My details</a></li>
-		<li><a href="{{ route('password.request') }}">Change password</a></li>
+		<li><a href="#">Change password</a></li>
 	</ul>	
 
 </aside>
